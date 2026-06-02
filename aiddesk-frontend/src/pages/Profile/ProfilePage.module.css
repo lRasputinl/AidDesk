@@ -1,0 +1,159 @@
+.page {
+  max-width: 860px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* Right column stacks the two cards vertically */
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.avatarCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.avatarName {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.avatarEmail {
+  font-size: 13px;
+  color: var(--text-secondary);
+  word-break: break-all;
+  text-align: center;
+}
+
+.avatarRole {
+  font-size: 12px;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.metaList {
+  width: 100%;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 12px;
+  text-align: left;
+}
+
+.metaList dt {
+  color: var(--text-muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metaList dd {
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.logoutBtn {
+  margin-top: 4px;
+}
+
+.formTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.formSub {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+/* ─── Mobile ─────────────────────────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .avatarCard {
+    flex-direction: row;
+    text-align: left;
+    flex-wrap: wrap;
+  }
+
+  .avatarInfo {
+    align-items: flex-start;
+  }
+
+  .avatarName,
+  .avatarEmail {
+    text-align: left;
+  }
+
+  .avatar {
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+}

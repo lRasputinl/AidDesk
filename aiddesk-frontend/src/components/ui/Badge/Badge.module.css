@@ -1,0 +1,52 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Status */
+.waiting {
+  background: var(--status-waiting-bg);
+  color: var(--status-waiting-text);
+}
+.inProgress {
+  background: var(--status-inprogress-bg);
+  color: var(--status-inprogress-text);
+}
+.done {
+  background: var(--status-done-bg);
+  color: var(--status-done-text);
+}
+
+/* Priority */
+.low {
+  background: var(--priority-low-bg);
+  color: var(--priority-low-text);
+}
+.medium {
+  background: var(--priority-medium-bg);
+  color: var(--priority-medium-text);
+}
+.high {
+  background: var(--priority-high-bg);
+  color: var(--priority-high-text);
+}
+
+/* Comment type */
+.public {
+  background: #dbeafe;
+  color: #1e40af;
+}
+.internal {
+  background: #fce7f3;
+  color: #9d174d;
+}
+
+.default {
+  background: #f3f4f6;
+  color: #374151;
+}

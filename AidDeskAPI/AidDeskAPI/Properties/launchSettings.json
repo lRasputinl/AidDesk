@@ -1,0 +1,18 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:5122",
+        "environmentVariables": {
+            "ASPNETCORE_ENVIRONMENT": "Development",
+            "ConnectionStrings__DefaultConnection": "Host=127.0.0.1;Port=5432;Database=AidDeskDB;Username=default_user;Password=4fybsbd25s1",
+            "Jwt__Issuer": "AidDeskAPI",
+            "Jwt__Audience": "AidDeskClient",
+            "Jwt__Key": "b8d91f4e7a2c5d6f8a1b3c9d0e4f7a8b6c2d1e9f5a7b3c8d4e6f1a9b2c7d5e8"
+        }
+    }
+  }
+}

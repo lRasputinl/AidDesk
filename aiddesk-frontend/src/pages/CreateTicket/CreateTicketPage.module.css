@@ -1,0 +1,157 @@
+.page {
+  /* Allow full width so the two-column layout can breathe */
+}
+
+/* Two-column layout: form on left, FAQ on right */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 20px;
+  align-items: start;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.cardSub {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.charCount {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: right;
+  margin-top: -10px;
+}
+
+.supportFields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px;
+  background: var(--bg-body);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--border-color);
+  overflow: visible;
+}
+
+.supportFields select {
+  max-width: 100%;
+}
+
+.formActions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+/* ─── FAQ ─────────────────────────────────────────────────────────────────── */
+.faqCard {
+  position: sticky;
+  top: calc(var(--header-height) + 16px);
+}
+
+.faqTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.faqItem {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.faqItem:last-child {
+  border-bottom: none;
+}
+
+.faqQuestion {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: color var(--transition);
+  line-height: 1.4;
+}
+
+.faqQuestion:hover {
+  color: var(--color-primary);
+}
+
+.faqQuestionOpen {
+  color: var(--color-primary);
+}
+
+.faqChevron {
+  font-size: 10px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.faqAnswer {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  padding: 0 0 12px 0;
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .faqCard {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .formActions {
+    flex-direction: column-reverse;
+  }
+
+  .formActions > * {
+    width: 100%;
+  }
+}
