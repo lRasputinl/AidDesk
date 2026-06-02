@@ -411,7 +411,11 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # VS Code files for those working on multiple tools
+<<<<<<< HEAD
 .vscode/
+=======
+.vscode/*
+>>>>>>> 08cfc080fcb8f0eb532699238cf8ce3fede812e1
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -431,4 +435,8 @@ FodyWeavers.xsd
 *.msm
 *.msp
 
+<<<<<<< HEAD
 *.vs/
+=======
+*.vs/
+>>>>>>> 08cfc080fcb8f0eb532699238cf8ce3fede812e1
