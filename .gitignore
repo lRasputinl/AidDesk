@@ -10,6 +10,7 @@
 *.userosscache
 *.sln.docstates
 *.env
+.env.*
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -314,6 +315,8 @@ FakesAssemblies/
 # Node.js Tools for Visual Studio
 .ntvs_analysis.dat
 node_modules/
+dist/
+build/
 
 # Visual Studio 6 build log
 *.plg
@@ -427,3 +430,5 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+*.vs/
